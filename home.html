@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookify - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.svg" alt="Bookify logo" width="40" height="40">
+                </div>
+                <h1 class="logo-text">Bookify</h1>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="home.html" class="nav-link active">Home</a>
+                <a href="rooms.html" class="nav-link">Rooms</a>
+                <a href="my-bookings.html" class="nav-link">My Bookings</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="login/login.html" class="nav-link">Logout</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="announcement-badge">Limited Offer</span>
+            <p>Save up to 30% on winter escapes when you book before December 15.</p>
+            <a href="rooms.html" class="announcement-link">Explore Deals <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div> -->
+
+    <main class="main-content">
+        <section class="hero hero-with-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-inner container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Find Your Dream<br>Accommodation</h1>
+                    <p class="hero-sub">Explore thousands of unique stays around the world. Book with confidence and
+                        create unforgettable memories.</p>
+
+                    <div class="hero-badge">
+                        <i class="fas fa-fire"></i>
+                        <div>
+                            <strong>Trending now</strong>
+                            <span>Over 2,000 new stays added this month</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="rooms.html" class="cta-btn">Browse Rooms</a>
+                        <a href="my-bookings.html" class="btn btn-outline" style="margin-left:12px;">My Bookings</a>
+                    </div>
+
+                    <form class="booking-search">
+                        <div class="search-field">
+                            <label for="location">Location</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-location-dot"></i>
+                                <input type="text" id="location" placeholder="Where are you heading?">
+                            </div>
+                        </div>
+                        <div class="search-field">
+                            <label for="checkin">Check-in</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-calendar-alt"></i>
+                                <input type="date" id="checkin">
+                            </div>
+                        </div>
+                        <div class="search-field">
+                            <label for="checkout">Check-out</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-calendar-check"></i>
+                                <input type="date" id="checkout">
+                            </div>
+                        </div>
+                        <div class="search-field">
+                            <label for="guests">Guests</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user-friends"></i>
+                                <input type="number" id="guests" min="1" value="2">
+                            </div>
+                        </div>
+                        <button type="submit" class="search-submit">Search</button>
+                    </form>
+
+                    <div class="stats">
+                        <div class="stat-card">
+                            <h3>5,000+</h3>
+                            <p>Listings Worldwide</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>1M+</h3>
+                            <p>Happy Guests</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>4.9</h3>
+                            <p>Average Rating</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h3>Why Choose Bookify?</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-search"></i>
+                        <h4>Easy Search</h4>
+                        <p>Find rooms that match your preferences</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h4>Instant Booking</h4>
+                        <p>Book your room in just a few clicks</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Secure Payment</h4>
+                        <p>Safe and secure transactions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="featured-rooms">
+            <div class="container">
+                <h3>Featured Rooms</h3>
+                <div class="rooms-grid">
+                    <div class="room-card">
+                        <div class="room-image-wrapper">
+                            <img src="assets/property-3.jpg" alt="Room Image">
+                            <span class="room-badge">Premium</span>
+                        </div>
+                        <div class="room-info">
+                            <h4>Deluxe Suite</h4>
+                            <p class="room-price">$150/night</p>
+                            <p class="room-rating"><i class="fas fa-star"></i> 4.8 (24 reviews)</p>
+                            <a href="room-details.html?id=1" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <div class="room-image-wrapper">
+                            <img src="assets/property-1.jpg" alt="Room Image">
+                            <span class="room-badge">Luxury</span>
+                        </div>
+                        <div class="room-info">
+                            <h4>Royal Mansion</h4>
+                            <p class="room-price">$250/night</p>
+                            <p class="room-rating"><i class="fas fa-star"></i> 4.9 (38 reviews)</p>
+                            <a href="room-details.html?id=2" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <div class="room-image-wrapper">
+                            <img src="assets/property-2.jpg" alt="Room Image">
+                            <span class="room-badge">Budget</span>
+                        </div>
+                        <div class="room-info">
+                            <h4>Cozy Studio</h4>
+                            <p class="room-price">$75/night</p>
+                            <p class="room-rating"><i class="fas fa-star"></i> 4.6 (15 reviews)</p>
+                            <a href="room-details.html?id=3" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <div class="room-image-wrapper">
+                            <img src="assets/property-4.jpg" alt="Room Image">
+                            <span class="room-badge">Eco</span>
+                        </div>
+                        <div class="room-info">
+                            <h4>Forest Retreat</h4>
+                            <p class="room-price">$120/night</p>
+                            <p class="room-rating"><i class="fas fa-star"></i> 4.7 (19 reviews)</p>
+                            <a href="room-details.html?id=4" class="btn">View Details</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="journey">
+            <div class="container journey-grid">
+                <div class="journey-content">
+                    <p class="eyebrow">Plan With Ease</p>
+                    <h3>From inspiration to check-out, we’ve got you covered.</h3>
+                    <p>Use smart filters, real-time availability, and verified reviews to find a stay that feels like
+                        home anywhere in the world.</p>
+                    <ul class="journey-list">
+                        <li><i class="fas fa-check"></i>AI-powered recommendations tailored to your style</li>
+                        <li><i class="fas fa-check"></i>Secure messaging with hosts and instant confirmations</li>
+                        <li><i class="fas fa-check"></i>24/7 concierge support in multiple languages</li>
+                    </ul>
+                    <div class="journey-actions">
+                        <a href="about.html" class="btn btn-outline">How Bookify Works</a>
+                        <a href="contact.html" class="btn ghost-btn">Talk to our team</a>
+                    </div>
+                </div>
+                <div class="journey-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-step">1</span>
+                        <div>
+                            <h4>Discover</h4>
+                            <p>Browse curated collections and trending destinations.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-step">2</span>
+                        <div>
+                            <h4>Customize</h4>
+                            <p>Set filters, add perks, and compare favorite listings.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-step">3</span>
+                        <div>
+                            <h4>Confirm</h4>
+                            <p>Book securely with flexible cancellation options.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-step">4</span>
+                        <div>
+                            <h4>Enjoy</h4>
+                            <p>Unlock local guides, smart check-in, and concierge perks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <div class="testimonials-header">
+                    <p class="eyebrow">Loved by Travelers</p>
+                    <h3>Real stories from our global community.</h3>
+                    <div class="testimonial-controls">
+                        <button class="control-btn" aria-label="Previous testimonial">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button class="control-btn" aria-label="Next testimonial">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">“Bookify helped us find the perfect stay during our honeymoon. The
+                            concierge team surprised us with local experiences we’ll never forget.”</p>
+                        <div class="testimonial-author">
+                            <img src="assets/avatars/guest-1.jpg" alt="Guest portrait">
+                            <div>
+                                <h4>Layla & Omar</h4>
+                                <span>Dubai, UAE</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card highlighted">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">“The booking experience feels premium from start to finish, and
+                            flexible cancellation took the stress out of planning our family trip.”</p>
+                        <div class="testimonial-author">
+                            <img src="assets/avatars/guest-2.jpg" alt="Guest portrait">
+                            <div>
+                                <h4>The Andersens</h4>
+                                <span>Oslo, Norway</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">“As a digital nomad, I rely on Bookify’s verified reviews and fast
+                            Wi-Fi filter. It’s my go-to every time I relocate.”</p>
+                        <div class="testimonial-author">
+                            <img src="assets/avatars/guest-3.jpg" alt="Guest portrait">
+                            <div>
+                                <h4>Chiara Romano</h4>
+                                <span>Milan, Italy</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container newsletter-grid">
+                <div class="newsletter-content">
+                    <p class="eyebrow">Stay Inspired</p>
+                    <h3>Get weekly travel drops and private offers.</h3>
+                    <p>Subscribe for curated itineraries, host highlights, and insider tips from locals.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="cta-btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookify</h4>
+                    <p>Your trusted room booking platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bookify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="particles" id="particles"></div>
+
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            const navLinkElements = navLinks.querySelectorAll('.nav-link');
+            navLinkElements.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

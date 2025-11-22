@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookify - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="../assets/logo.svg" alt="Bookify logo" width="40" height="40">
+                </div>
+                <h1 class="logo-text">Bookify</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="/login/login.html" class="nav-link">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-item active" data-section="overview">
+                    <i class="fas fa-chart-line"></i>
+                    Overview
+                </a>
+                <a href="#bookings" class="nav-item" data-section="bookings">
+                    <i class="fas fa-calendar-check"></i>
+                    Bookings
+                </a>
+                <a href="#rooms" class="nav-item" data-section="rooms">
+                    <i class="fas fa-bed"></i>
+                    Rooms
+                </a>
+                <a href="#users" class="nav-item" data-section="users">
+                    <i class="fas fa-users"></i>
+                    Users
+                </a>
+                <a href="#analytics" class="nav-item" data-section="analytics">
+                    <i class="fas fa-chart-bar"></i>
+                    Analytics
+                </a>
+                <!-- <a href="#settings" class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a> -->
+            </nav>
+        </aside>
+
+        <section class="dashboard-content">
+            <!-- Overview Section -->
+            <div class="dashboard-section active" id="overview">
+                <h1>Dashboard Overview</h1>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1,234</h3>
+                            <p>Total Bookings</p>
+                            <span class="stat-change positive">+12.5%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>567</h3>
+                            <p>Active Users</p>
+                            <span class="stat-change positive">+8.2%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>89</h3>
+                            <p>Available Rooms</p>
+                            <span class="stat-change negative">-2.1%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>$45,678</h3>
+                            <p>Monthly Revenue</p>
+                            <span class="stat-change positive">+15.3%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>Booking Trends</h3>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Booking trends chart would go here</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <h3>Revenue Overview</h3>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>Revenue chart would go here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>New user registered: <strong>john.doe@example.com</strong></p>
+                                <span class="activity-time">2 minutes ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>Booking confirmed for Deluxe Suite</p>
+                                <span class="activity-time">15 minutes ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>Booking cancelled: #BK2024001</p>
+                                <span class="activity-time">1 hour ago</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>New room added: Executive Suite</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bookings Section -->
+            <div class="dashboard-section" id="bookings">
+                <h1>Bookings Management</h1>
+
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <label for="status-filter">Status:</label>
+                        <select id="status-filter">
+                            <option value="all">All Status</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="pending">Pending</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="date-filter">Date:</label>
+                        <input type="date" id="date-filter">
+                    </div>
+
+                    <button class="btn btn-primary">Export</button>
+                </div>
+
+                <div class="bookings-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Customer</th>
+                                <th>Room</th>
+                                <th>Check-in</th>
+                                <th>Check-out</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK2024001</td>
+                                <td>John Doe</td>
+                                <td>Deluxe Suite</td>
+                                <td>Dec 15, 2024</td>
+                                <td>Dec 17, 2024</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td>$300</td>
+                                <td>
+                                    <button class="btn-link" onclick="viewBooking('BK2024001')">View</button>
+                                    <button class="btn-link" onclick="editBooking('BK2024001')">Edit</button>
+                                    <button class="btn-link danger" onclick="cancelBooking('BK2024001')">Cancel</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#BK2024002</td>
+                                <td>Jane Smith</td>
+                                <td>Standard Room</td>
+                                <td>Dec 20, 2024</td>
+                                <td>Dec 22, 2024</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>$200</td>
+                                <td>
+                                    <button class="btn-link" onclick="viewBooking('BK2024002')">View</button>
+                                    <button class="btn-link" onclick="editBooking('BK2024002')">Edit</button>
+                                    <button class="btn-link danger" onclick="cancelBooking('BK2024002')">Cancel</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#BK2023001</td>
+                                <td>Mike Johnson</td>
+                                <td>Executive Suite</td>
+                                <td>Nov 10, 2024</td>
+                                <td>Nov 12, 2024</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td>$400</td>
+                                <td>
+                                    <button class="btn-link" onclick="viewBooking('BK2023001')">View</button>
+                                    <button class="btn-link" onclick="refundBooking('BK2023001')">Refund</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Rooms Section -->
+            <div class="dashboard-section" id="rooms">
+                <h1>Room Management</h1>
+
+                <div class="section-header">
+                    <h2>All Rooms</h2>
+                    <button class="btn btn-primary" onclick="addNewRoom()">
+                        <i class="fas fa-plus"></i>
+                        Add New Room
+                    </button>
+                </div>
+
+                <div class="rooms-grid">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="../assets/property-1.jpg" alt="Deluxe Suite">
+                            <div class="room-status available">Available</div>
+                        </div>
+                        <div class="room-info">
+                            <h3>Deluxe Suite</h3>
+                            <p class="room-price">$150/night</p>
+                            <div class="room-features">
+                                <span><i class="fas fa-users"></i> 2 guests</span>
+                                <span><i class="fas fa-bed"></i> King bed</span>
+                                <span><i class="fas fa-wifi"></i> WiFi</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn btn-secondary" onclick="editRoom('room1')">Edit</button>
+                                <button class="btn btn-danger" onclick="deleteRoom('room1')">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="../assets/property-2.jpg" alt="Standard Room">
+                            <div class="room-status occupied">Occupied</div>
+                        </div>
+                        <div class="room-info">
+                            <h3>Standard Room</h3>
+                            <p class="room-price">$100/night</p>
+                            <div class="room-features">
+                                <span><i class="fas fa-users"></i> 2 guests</span>
+                                <span><i class="fas fa-bed"></i> Queen bed</span>
+                                <span><i class="fas fa-wifi"></i> WiFi</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn btn-secondary" onclick="editRoom('room2')">Edit</button>
+                                <button class="btn btn-danger" onclick="deleteRoom('room2')">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="../assets/property-3.jpg" alt="Executive Suite">
+                            <div class="room-status maintenance">Maintenance</div>
+                        </div>
+                        <div class="room-info">
+                            <h3>Executive Suite</h3>
+                            <p class="room-price">$200/night</p>
+                            <div class="room-features">
+                                <span><i class="fas fa-users"></i> 4 guests</span>
+                                <span><i class="fas fa-bed"></i> King bed</span>
+                                <span><i class="fas fa-wifi"></i> WiFi</span>
+                            </div>
+                            <div class="room-actions">
+                                <button class="btn btn-secondary" onclick="editRoom('room3')">Edit</button>
+                                <button class="btn btn-danger" onclick="deleteRoom('room3')">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Section -->
+            <div class="dashboard-section" id="users">
+                <h1>User Management</h1>
+
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <label for="user-role-filter">Role:</label>
+                        <select id="user-role-filter">
+                            <option value="all">All Roles</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="user-search">Search:</label>
+                        <input type="text" id="user-search" placeholder="Search users...">
+                    </div>
+
+                    <button class="btn btn-primary">Export Users</button>
+                </div>
+
+                <div class="users-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Join Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john.doe@example.com</td>
+                                <td>Admin</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>Jan 15, 2024</td>
+                                <td>
+                                    <button class="btn-link" onclick="viewUser('user1')">View</button>
+                                    <button class="btn-link" onclick="editUser('user1')">Edit</button>
+                                    <button class="btn-link danger" onclick="suspendUser('user1')">Suspend</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane.smith@example.com</td>
+                                <td>User</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>Feb 20, 2024</td>
+                                <td>
+                                    <button class="btn-link" onclick="viewUser('user2')">View</button>
+                                    <button class="btn-link" onclick="editUser('user2')">Edit</button>
+                                    <button class="btn-link danger" onclick="suspendUser('user2')">Suspend</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Mike Johnson</td>
+                                <td>mike.johnson@example.com</td>
+                                <td>User</td>
+                                <td><span class="status-badge suspended">Suspended</span></td>
+                                <td>Mar 10, 2024</td>
+                                <td>
+                                    <button class="btn-link" onclick="viewUser('user3')">View</button>
+                                    <button class="btn-link" onclick="editUser('user3')">Edit</button>
+                                    <button class="btn-link" onclick="activateUser('user3')">Activate</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div class="dashboard-section" id="analytics">
+                <h1>Analytics</h1>
+
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Revenue Analytics</h3>
+                        <div class="metric">
+                            <span class="metric-value">$45,678</span>
+                            <span class="metric-label">This Month</span>
+                            <span class="metric-change positive">+15.3%</span>
+                        </div>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Revenue trend chart</p>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card">
+                        <h3>Booking Analytics</h3>
+                        <div class="metric">
+                            <span class="metric-value">1,234</span>
+                            <span class="metric-label">Total Bookings</span>
+                            <span class="metric-change positive">+12.5%</span>
+                        </div>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <p>Booking analytics chart</p>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card">
+                        <h3>User Analytics</h3>
+                        <div class="metric">
+                            <span class="metric-value">567</span>
+                            <span class="metric-label">Active Users</span>
+                            <span class="metric-change positive">+8.2%</span>
+                        </div>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-users"></i>
+                            <p>User growth chart</p>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card">
+                        <h3>Room Occupancy</h3>
+                        <div class="metric">
+                            <span class="metric-value">85%</span>
+                            <span class="metric-label">Average Occupancy</span>
+                            <span class="metric-change positive">+5.1%</span>
+                        </div>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-bed"></i>
+                            <p>Occupancy rate chart</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div class="dashboard-section" id="settings">
+                <h1>System Settings</h1>
+
+                <div class="settings-sections">
+                    <div class="settings-section">
+                        <h3>General Settings</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="site-title">Site Title</label>
+                                <input type="text" id="site-title" value="Bookify">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="site-description">Site Description</label>
+                                <textarea id="site-description" rows="3">Your trusted room booking platform</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email">Contact Email</label>
+                                <input type="email" id="contact-email" value="support@bookify.com">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Booking Settings</h3>
+                        <div class="settings-list">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Allow Same-Day Bookings</h4>
+                                    <p>Enable bookings for the current day</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Require Phone Verification</h4>
+                                    <p>Require phone number verification for bookings</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Auto-Confirm Bookings</h4>
+                                    <p>Automatically confirm bookings without admin approval</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Payment Settings</h3>
+                        <div class="settings-list">
+                            <div class="form-group">
+                                <label for="currency">Default Currency</label>
+                                <select id="currency">
+                                    <option value="USD">USD ($)</option>
+                                    <option value="EUR">EUR (€)</option>
+                                    <option value="GBP">GBP (£)</option>
+                                </select>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Enable Online Payments</h4>
+                                    <p>Allow customers to pay online</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Require Deposit</h4>
+                                    <p>Require a deposit for bookings</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="particles" id="particles"></div>
+
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Sidebar navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const section = this.dataset.section;
+
+                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                document.querySelectorAll('.dashboard-section').forEach(content => content.classList.remove('active'));
+
+                this.classList.add('active');
+                document.getElementById(section).classList.add('active');
+            });
+        });
+
+        // Placeholder functions for admin actions
+        function viewBooking(id) { alert('Viewing booking: ' + id); }
+        function editBooking(id) { alert('Editing booking: ' + id); }
+        function cancelBooking(id) { alert('Cancelling booking: ' + id); }
+        function refundBooking(id) { alert('Processing refund for: ' + id); }
+
+        function addNewRoom() { alert('Adding new room'); }
+        function editRoom(id) { alert('Editing room: ' + id); }
+        function deleteRoom(id) { alert('Deleting room: ' + id); }
+
+        function viewUser(id) { alert('Viewing user: ' + id); }
+        function editUser(id) { alert('Editing user: ' + id); }
+        function suspendUser(id) { alert('Suspending user: ' + id); }
+        function activateUser(id) { alert('Activating user: ' + id); }
+
+        createParticles();
+    </script>
+</body>
+
+</html>

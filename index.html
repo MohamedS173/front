@@ -4,11 +4,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Bookify - Discover Your Perfect Stay</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <div class="bg-animation">
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
 
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.svg" alt="Bookify logo" width="40" height="40">
+                </div>
+                <h1 class="logo-text">Bookify</h1>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="login/login.html" class="nav-link">Login</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero hero-with-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-inner container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Find Your Dream<br>Accommodation</h1>
+                    <p class="hero-sub">Explore thousands of unique stays around the world. Book with confidence and
+                        create unforgettable memories.</p>
+
+                    <div class="hero-badge">
+                        <i class="fas fa-fire"></i>
+                        <div>
+                            <strong>Trending now</strong>
+                            <span>Over 2,000 new stays added this month</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="login/login.html" class="cta-btn">Get Started</a>
+                        <a href="login/login.html" class="btn btn-outline">Sign In</a>
+                    </div>
+
+                    <div class="social-proof">
+                        <div class="avatar-group">
+                            <div class="avatar">👤</div>
+                            <div class="avatar">👤</div>
+                            <div class="avatar">👤</div>
+                            <div class="avatar more">+5K</div>
+                        </div>
+                        <div class="proof-text">
+                            <p><strong>5,000+</strong> travelers already trust Bookify</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="assets/header.jpg" alt="Featured Accommodation" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Premium Listings</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Happy Guests</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Customer Support</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section container">
+            <div class="section-header">
+                <h2>Why Choose Bookify?</h2>
+                <p>Experience the best accommodation booking platform with features designed for you</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Easy Search</h3>
+                    <p>Find the perfect accommodation in seconds with our advanced search filters and AI-powered
+                        recommendations</p>
+                    <div class="feature-badge">Smart Matching</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Booking</h3>
+                    <p>Your data is safe with our encrypted and secure payment processing using industry-leading
+                        security</p>
+                    <div class="feature-badge">SSL Encrypted</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Verified Reviews</h3>
+                    <p>Read genuine reviews from real guests to make informed decisions backed by authentic experiences
+                    </p>
+                    <div class="feature-badge">100% Verified</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is always ready to help you with any questions or concerns</p>
+                    <div class="feature-badge">Always Available</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section container">
+            <div class="section-header">
+                <h2>What Our Guests Say</h2>
+                <p>Real experiences from real travelers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Amazing platform! Found the perfect accommodation in minutes. The
+                        booking process was smooth and secure."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div>
+                            <div class="author-name">John Doe</div>
+                            <div class="author-location">New York, USA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Customer support was incredibly helpful when I had questions. Bookify
+                        truly cares about their users."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div>
+                            <div class="author-name">Sarah Miller</div>
+                            <div class="author-location">London, UK</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best accommodation booking platform I've used. Wide variety of options
+                        at competitive prices!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div>
+                            <div class="author-name">Marco Chen</div>
+                            <div class="author-location">Tokyo, Japan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content container">
+                <h2>Ready to Book Your Next Stay?</h2>
+                <p>Join thousands of satisfied travelers exploring the world with Bookify</p>
+                <a href="login/login.html" class="cta-btn">Sign Up Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h4>About Bookify</h4>
+                <p>Your trusted platform for finding and booking unique accommodations worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login/login.html">Sign In</a></li>
+                    <li><a href="login/signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@bookify.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bookify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

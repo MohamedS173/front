@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookify - Booking Confirmed</title>
+    <link rel="stylesheet" href="booking-success.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.svg" alt="Bookify logo" width="40" height="40">
+                </div>
+                <h1 class="logo-text">Bookify</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="rooms.html" class="nav-link">Rooms</a>
+                <a href="my-bookings.html" class="nav-link">My Bookings</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="login/login.html" class="nav-link">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="success-section">
+            <div class="container">
+                <div class="success-card">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+                    <h1>Booking Confirmed!</h1>
+                    <p class="success-message">Your room has been successfully booked. We've sent a confirmation email
+                        with all the details.</p>
+
+                    <div class="booking-details">
+                        <h3>Booking Details</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="label">Booking ID:</span>
+                                <span class="value">#BK2024001</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Check-in:</span>
+                                <span class="value">December 15, 2024</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Check-out:</span>
+                                <span class="value">December 17, 2024</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Guests:</span>
+                                <span class="value">2 Adults</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Room:</span>
+                                <span class="value">Deluxe Suite</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Total Paid:</span>
+                                <span class="value">$575</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="next-steps">
+                        <h3>What happens next?</h3>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Check your email</h4>
+                                    <p>You'll receive a detailed confirmation with check-in instructions</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Check-in on arrival</h4>
+                                    <p>Present your booking ID at the front desk</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="step-content">
+                                    <h4>Mobile check-in</h4>
+                                    <p>Use our app for contactless check-in (available 24 hours before arrival)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <a href="my-bookings.html" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i>
+                            View My Bookings
+                        </a>
+                        <a href="home.html" class="btn btn-secondary">
+                            <i class="fas fa-home"></i>
+                            Back to Home
+                        </a>
+                    </div>
+
+                    <div class="contact-info">
+                        <p>Need help? Contact our support team at <a
+                                href="mailto:support@bookify.com">support@bookify.com</a> or call <a
+                                href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookify</h4>
+                    <p>Your trusted room booking platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bookify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="particles" id="particles"></div>
+
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        function downloadConfirmation() {
+            // Placeholder for download functionality
+            alert('Downloading booking confirmation...');
+        }
+
+        createParticles();
+    </script>
+</body>
+
+</html>

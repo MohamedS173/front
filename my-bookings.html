@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookify - My Bookings</title>
+    <link rel="stylesheet" href="my-bookings.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.svg" alt="Bookify logo" width="40" height="40">
+                </div>
+                <h1 class="logo-text">Bookify</h1>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="rooms.html" class="nav-link">Rooms</a>
+                <a href="my-bookings.html" class="nav-link active">My Bookings</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="login/login.html" class="nav-link">Logout</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="booking-hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Travel timeline</p>
+                    <h1>Track every stay from one sleek timeline.</h1>
+                    <p class="hero-sub">Manage upcoming trips, revisit past memories, and access receipts or concierge
+                        support in two taps.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-label">Next check-in</span>
+                            <span class="stat-value">Dec 15</span>
+                            <small>North Hills, CA</small>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Nights booked</span>
+                            <span class="stat-value">48</span>
+                            <small>2024 total</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div class="status-legend">
+                        <p class="legend-title">Status legend</p>
+                        <div><span class="dot confirmed"></span>Confirmed</div>
+                        <div><span class="dot pending"></span>Pending</div>
+                        <div><span class="dot completed"></span>Completed</div>
+                        <div><span class="dot cancelled"></span>Cancelled</div>
+                    </div>
+                    <div class="upcoming-card">
+                        <p>Next stay</p>
+                        <h3>Deluxe Suite</h3>
+                        <span class="date-range">Dec 15 → Dec 17</span>
+                        <div class="pill">
+                            <i class="fas fa-plane-departure"></i> Check-in 09:00 am
+                        </div>
+                        <div class="pill">
+                            <i class="fas fa-map-marker-alt"></i> 221B, North Hills
+                        </div>
+                        <button class="btn btn-secondary pill-btn">Message host</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-controls">
+            <div class="container controls-grid">
+                <div class="search-field">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="bookingSearch" placeholder="Search by city, hotel or booking ID">
+                </div>
+                <div class="filter-field">
+                    <label for="bookingSort">Sort</label>
+                    <select id="bookingSort">
+                        <option value="upcoming">Soonest first</option>
+                        <option value="recent">Recently added</option>
+                        <option value="long">Longest stay</option>
+                    </select>
+                </div>
+                <div class="filter-field">
+                    <label for="bookingType">Trip type</label>
+                    <select id="bookingType">
+                        <option value="">All stays</option>
+                        <option value="work">Work</option>
+                        <option value="leisure">Leisure</option>
+                        <option value="family">Family</option>
+                    </select>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bookings-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow">Your trips</p>
+                        <h2>All bookings</h2>
+                    </div>
+                </div>
+
+                <div class="bookings-tabs" role="tablist">
+                    <button class="tab-btn active" data-tab="upcoming" aria-selected="true">Upcoming</button>
+                    <button class="tab-btn" data-tab="past" aria-selected="false">Past Bookings</button>
+                    <button class="tab-btn" data-tab="cancelled" aria-selected="false">Cancelled</button>
+                </div>
+
+                <div class="bookings-content">
+                    <!-- Upcoming Bookings -->
+                    <div class="tab-content active" id="upcoming">
+                        <div class="booking-card" data-status="confirmed" data-location="Los Angeles">
+                            <div class="booking-image">
+                                <img src="assets/property-3.jpg" alt="Deluxe Suite">
+                            </div>
+                            <div class="booking-details">
+                                <h3>Deluxe Suite</h3>
+                                <p class="booking-location"><i class="fas fa-location-dot"></i> North Hills, Los Angeles
+                                </p>
+                                <div class="booking-info">
+                                    <span><i class="fas fa-calendar"></i> Check-in: Dec 15, 2024</span>
+                                    <span><i class="fas fa-calendar"></i> Check-out: Dec 17, 2024</span>
+                                    <span><i class="fas fa-users"></i> 2 Guests</span>
+                                    <span><i class="fas fa-hashtag"></i> Booking ID: #BK2024001</span>
+                                </div>
+                                <div class="booking-status">
+                                    <span class="status confirmed">Confirmed</span>
+                                    <span class="pill soft"><i class="fas fa-clock"></i> Free cancellation until Dec
+                                        10</span>
+                                </div>
+                            </div>
+                            <div class="booking-actions">
+                                <button class="btn btn-secondary" onclick="viewDetails('BK2024001')">View
+                                    Details</button>
+                                <button class="btn btn-outline" onclick="modifyBooking('BK2024001')">Modify</button>
+                                <button class="btn btn-danger" onclick="cancelBooking('BK2024001')">Cancel</button>
+                            </div>
+                        </div>
+
+                        <div class="booking-card" data-status="pending" data-location="Chicago">
+                            <div class="booking-image">
+                                <img src="assets/property-1.jpg" alt="Standard Room">
+                            </div>
+                            <div class="booking-details">
+                                <h3>Standard Room</h3>
+                                <p class="booking-location"><i class="fas fa-location-dot"></i> River West, Chicago</p>
+                                <div class="booking-info">
+                                    <span><i class="fas fa-calendar"></i> Check-in: Dec 20, 2024</span>
+                                    <span><i class="fas fa-calendar"></i> Check-out: Dec 22, 2024</span>
+                                    <span><i class="fas fa-users"></i> 1 Guest</span>
+                                    <span><i class="fas fa-hashtag"></i> Booking ID: #BK2024002</span>
+                                </div>
+                                <div class="booking-status">
+                                    <span class="status pending">Pending Payment</span>
+                                    <span class="pill warning"><i class="fas fa-bell"></i> Pay within 12h</span>
+                                </div>
+                            </div>
+                            <div class="booking-actions">
+                                <button class="btn btn-secondary" onclick="viewDetails('BK2024002')">View
+                                    Details</button>
+                                <button class="btn btn-primary" onclick="completePayment('BK2024002')">Complete
+                                    Payment</button>
+                                <button class="btn btn-danger" onclick="cancelBooking('BK2024002')">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Past Bookings -->
+                    <div class="tab-content" id="past">
+                        <div class="booking-card completed" data-status="completed" data-location="Lisbon">
+                            <div class="booking-image">
+                                <img src="assets/property-4.jpg" alt="Executive Suite">
+                            </div>
+                            <div class="booking-details">
+                                <h3>Executive Suite</h3>
+                                <p class="booking-location"><i class="fas fa-location-dot"></i> Alfama, Lisbon</p>
+                                <div class="booking-info">
+                                    <span><i class="fas fa-calendar"></i> Stay: Nov 10-12, 2024</span>
+                                    <span><i class="fas fa-users"></i> 2 Guests</span>
+                                    <span><i class="fas fa-hashtag"></i> Booking ID: #BK2023001</span>
+                                </div>
+                                <div class="booking-status">
+                                    <span class="status completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="booking-actions">
+                                <button class="btn btn-secondary" onclick="viewDetails('BK2023001')">View
+                                    Details</button>
+                                <button class="btn btn-outline" onclick="bookAgain('BK2023001')">Book Again</button>
+                                <button class="btn btn-outline" onclick="leaveReview('BK2023001')">Leave Review</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cancelled Bookings -->
+                    <div class="tab-content" id="cancelled">
+                        <div class="booking-card cancelled" data-status="cancelled" data-location="Tokyo">
+                            <div class="booking-image">
+                                <img src="assets/property-2.jpg" alt="Deluxe Room">
+                            </div>
+                            <div class="booking-details">
+                                <h3>Deluxe Room</h3>
+                                <p class="booking-location"><i class="fas fa-location-dot"></i> Shibuya, Tokyo</p>
+                                <div class="booking-info">
+                                    <span><i class="fas fa-calendar"></i> Cancelled: Oct 5, 2024</span>
+                                    <span><i class="fas fa-users"></i> 1 Guest</span>
+                                    <span><i class="fas fa-hashtag"></i> Booking ID: #BK2022001</span>
+                                </div>
+                                <div class="booking-status">
+                                    <span class="status cancelled">Cancelled</span>
+                                </div>
+                            </div>
+                            <div class="booking-actions">
+                                <button class="btn btn-secondary" onclick="viewDetails('BK2022001')">View
+                                    Details</button>
+                                <button class="btn btn-outline" onclick="bookAgain('BK2022001')">Book Again</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookify</h4>
+                    <p>Your trusted room booking platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bookify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="particles" id="particles"></div>
+
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            const navLinkElements = navLinks.querySelectorAll('.nav-link');
+            navLinkElements.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                });
+            });
+        }
+
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                this.setAttribute('aria-selected', 'true');
+                document.getElementById(this.dataset.tab).classList.add('active');
+            });
+        });
+
+        function viewDetails(bookingId) {
+            // Placeholder for view details functionality
+            alert('Viewing details for booking: ' + bookingId);
+        }
+
+        function modifyBooking(bookingId) {
+            // Placeholder for modify booking functionality
+            alert('Modifying booking: ' + bookingId);
+        }
+
+        function cancelBooking(bookingId) {
+            // Placeholder for cancel booking functionality
+            if (confirm('Are you sure you want to cancel this booking?')) {
+                alert('Booking cancelled: ' + bookingId);
+            }
+        }
+
+        function completePayment(bookingId) {
+            // Placeholder for complete payment functionality
+            alert('Completing payment for booking: ' + bookingId);
+        }
+
+        function bookAgain(bookingId) {
+            // Placeholder for book again functionality
+            alert('Booking again: ' + bookingId);
+        }
+
+        function leaveReview(bookingId) {
+            // Placeholder for leave review functionality
+            alert('Leaving review for booking: ' + bookingId);
+        }
+
+        const bookingSearchInput = document.getElementById('bookingSearch');
+        const bookingCards = document.querySelectorAll('.booking-card');
+        const quickActionChips = document.querySelectorAll('.quick-actions .chip');
+
+        function filterBookings() {
+            if (!bookingSearchInput) return;
+            const query = bookingSearchInput.value.toLowerCase().trim();
+            bookingCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(query) ? 'flex' : 'none';
+            });
+        }
+
+        if (bookingSearchInput) {
+            bookingSearchInput.addEventListener('input', filterBookings);
+        }
+
+        quickActionChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                quickActionChips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            });
+        });
+
+        createParticles();
+    </script>
+</body>
+
+</html>

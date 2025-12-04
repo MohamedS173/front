@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookify - User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.svg" alt="Bookify logo" width="40" height="40">
+                </div>
+                <h1 class="logo-text">Bookify</h1>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="rooms.html" class="nav-link">Rooms</a>
+                <a href="my-bookings.html" class="nav-link">My Bookings</a>
+                <a href="profile.html" class="nav-link active">Profile</a>
+                <a href="login/login.html" class="nav-link">Logout</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="placeholder-avatar.jpg" alt="User Avatar">
+                        <!-- <button class="edit-avatar-btn" onclick="editAvatar()">
+                            <i class="fas fa-camera"></i>
+                        </button> -->
+                    </div>
+                    <div class="profile-info">
+                        <h1>John Doe</h1>
+                        <p class="member-since">Member since January 2024</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Total Bookings</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">4.8</span>
+                                <span class="stat-label">Average Rating</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Reviews Given</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-content">
+                    <div class="profile-sidebar">
+                        <nav class="profile-nav">
+                            <a href="#personal" class="nav-item active" data-section="personal">
+                                <i class="fas fa-user"></i>
+                                Personal Information
+                            </a>
+                            <!-- <a href="#security" class="nav-item" data-section="security">
+                                <i class="fas fa-shield-alt"></i>
+                                Security & Privacy
+                            </a> -->
+                            <!-- <a href="#preferences" class="nav-item" data-section="preferences">
+                                <i class="fas fa-cog"></i>
+                                Preferences
+                            </a> -->
+                            <a href="#payment" class="nav-item" data-section="payment">
+                                <i class="fas fa-credit-card"></i>
+                                Payment Methods
+                            </a>
+                            <!-- <a href="#notifications" class="nav-item" data-section="notifications">
+                                <i class="fas fa-bell"></i>
+                                Notifications
+                            </a> -->
+                        </nav>
+                    </div>
+
+                    <div class="profile-main">
+
+                        <div class="profile-section-content active" id="personal">
+                            <h2>Personal Information</h2>
+                            <form class="profile-form" id="personalForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" value="mido" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" value="ahmed" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" value="mohamed@example.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" value="+20 101 659 4998" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dateOfBirth">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" value="2005-08-10">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <textarea id="address" rows="3">123 Main Street, City, State 12345</textarea>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="profile-section-content" id="security">
+                            <h2>Security & Privacy</h2>
+
+                            <div class="security-section">
+                                <h3>Change Password</h3>
+                                <form class="security-form" id="passwordForm">
+                                    <div class="form-group">
+                                        <label for="currentPassword">Current Password</label>
+                                        <input type="password" id="currentPassword" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="newPassword">New Password</label>
+                                        <input type="password" id="newPassword" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm New Password</label>
+                                        <input type="password" id="confirmPassword" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Update Password</button>
+                                </form>
+                            </div>
+
+                            <div class="security-section">
+                                <h3>Two-Factor Authentication</h3>
+                                <div class="security-toggle">
+                                    <div class="toggle-info">
+                                        <h4>Enable 2FA</h4>
+                                        <p>Add an extra layer of security to your account</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" id="twoFactorToggle">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="security-section">
+                                <h3>Privacy Settings</h3>
+                                <div class="privacy-settings">
+                                    <div class="setting-item">
+                                        <div class="setting-info">
+                                            <h4>Profile Visibility</h4>
+                                            <p>Control who can see your profile information</p>
+                                        </div>
+                                        <select class="setting-select">
+                                            <option value="public">Public</option>
+                                            <option value="friends">Friends Only</option>
+                                            <option value="private">Private</option>
+                                        </select>
+                                    </div>
+                                    <div class="setting-item">
+                                        <div class="setting-info">
+                                            <h4>Booking History</h4>
+                                            <p>Show your booking history to others</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preferences -->
+                        <div class="profile-section-content" id="preferences">
+                            <h2>Preferences</h2>
+
+                            <div class="preference-section">
+                                <h3>Room Preferences</h3>
+                                <div class="preference-grid">
+                                    <div class="preference-item">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            Smoking Room
+                                        </label>
+                                    </div>
+                                    <div class="preference-item">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            Pet Friendly
+                                        </label>
+                                    </div>
+                                    <div class="preference-item">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            Accessible Room
+                                        </label>
+                                    </div>
+                                    <div class="preference-item">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                            Ocean View
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preference-section">
+                                <h3>Communication Preferences</h3>
+                                <div class="comm-preferences">
+                                    <div class="comm-item">
+                                        <div class="comm-info">
+                                            <h4>Email Notifications</h4>
+                                            <p>Receive booking confirmations and updates</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="comm-item">
+                                        <div class="comm-info">
+                                            <h4>SMS Notifications</h4>
+                                            <p>Get text messages for important updates</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="comm-item">
+                                        <div class="comm-info">
+                                            <h4>Marketing Emails</h4>
+                                            <p>Receive offers and promotional content</p>
+                                        </div>
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="profile-section-content" id="payment">
+                            <h2>Payment Methods</h2>
+
+                            <div class="payment-methods">
+                                <div class="payment-method-card primary">
+                                    <div class="card-info">
+                                        <div class="card-type">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <span>Visa ending in 4242</span>
+                                        </div>
+                                        <span class="card-expiry">Expires 12/26</span>
+                                    </div>
+                                    <div class="card-actions">
+                                        <span class="primary-badge">Primary</span>
+                                        <button class="btn-link"
+                                            onclick="openPaymentModal('edit', 'visa4242')">Edit</button>
+                                        <button class="btn-link" onclick="removeCard('visa4242')">Remove</button>
+                                    </div>
+                                </div>
+
+                                <div class="payment-method-card">
+                                    <div class="card-info">
+                                        <div class="card-type">
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <span>Mastercard ending in 8888</span>
+                                        </div>
+                                        <span class="card-expiry">Expires 08/25</span>
+                                    </div>
+                                    <div class="card-actions">
+                                        <button class="btn-link" onclick="setPrimary('master8888')">Set as
+                                            Primary</button>
+                                        <button class="btn-link"
+                                            onclick="openPaymentModal('edit', 'master8888')">Edit</button>
+                                        <button class="btn-link" onclick="removeCard('master8888')">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline" onclick="openPaymentModal('add')">
+                                <i class="fas fa-plus"></i>
+                                Add New Payment Method
+                            </button>
+                        </div>
+
+                        <!-- Notifications -->
+                        <div class="profile-section-content" id="notifications">
+                            <h2>Notification Settings</h2>
+
+                            <div class="notification-settings">
+                                <div class="notification-item">
+                                    <div class="notification-info">
+                                        <h4>Booking Confirmations</h4>
+                                        <p>Get notified when your booking is confirmed</p>
+                                    </div>
+                                    <div class="notification-options">
+                                        <label class="radio-wrapper">
+                                            <input type="radio" name="booking-confirm" value="email" checked>
+                                            <span class="radio-checkmark"></span>
+                                            Email
+                                        </label>
+                                        <label class="radio-wrapper">
+                                            <input type="radio" name="booking-confirm" value="sms">
+                                            <span class="radio-checkmark"></span>
+                                            SMS
+                                        </label>
+                                        <label class="radio-wrapper">
+                                            <input type="radio" name="booking-confirm" value="both">
+                                            <span class="radio-checkmark"></span>
+                                            Both
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="notification-info">
+                                        <h4>Check-in Reminders</h4>
+                                        <p>Receive reminders before your check-in time</p>
+                                    </div>
+                                    <div class="notification-options">
+                                        <label class="radio-wrapper">
+                                            <input type="radio" name="checkin-reminder" value="email" checked>
+                                            <span class="radio-checkmark"></span>
+                                            Email
+                                        </label>
+                                        <label class="radio-wrapper">
+                                            <input type="radio" name="checkin-reminder" value="sms">
+                                            <span class="radio-checkmark"></span>
+                                            SMS
+                                        </label>
+                                        <label class="radio-wrapper">
+                                            <input type="radio" name="checkin-reminder" value="none">
+                                            <span class="radio-checkmark"></span>
+                                            None
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="notification-info">
+                                        <h4>Promotional Offers</h4>
+                                        <p>Stay updated with special deals and offers</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Payment Modal Overlay -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Payment Method</h3>
+                <button class="modal-close" onclick="closePaymentModal()">&times;</button>
+            </div>
+            <form class="payment-form" id="paymentForm">
+                <div class="form-group">
+                    <label for="cardholderName">Cardholder Name</label>
+                    <input type="text" id="cardholderName" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+                    </div>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="setAsPrimary" name="setAsPrimary">
+                    <label for="setAsPrimary">Set as primary payment method</label>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closePaymentModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Payment Method</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookify</h4>
+                    <p>Your trusted room booking platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bookify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="particles" id="particles"></div>
+
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            const navLinkElements = navLinks.querySelectorAll('.nav-link');
+            navLinkElements.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                });
+            });
+        }
+
+        // Profile navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const section = this.dataset.section;
+
+                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                document.querySelectorAll('.profile-section-content').forEach(content => content.classList.remove('active'));
+
+                this.classList.add('active');
+                document.getElementById(section).classList.add('active');
+            });
+        });
+
+        function editAvatar() {
+            // Placeholder for avatar editing
+            alert('Avatar editing functionality would open here');
+        }
+
+        function resetForm() {
+            document.getElementById('personalForm').reset();
+        }
+
+        function openPaymentModal(mode, cardId) {
+            const modal = document.getElementById('paymentModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const paymentForm = document.getElementById('paymentForm');
+
+            if (mode === 'add') {
+                modalTitle.textContent = 'Add Payment Method';
+                paymentForm.reset();
+            } else {
+                modalTitle.textContent = 'Edit Payment Method';
+                // Pre-fill form with card data (placeholder)
+                document.getElementById('cardholderName').value = 'John Doe';
+                document.getElementById('cardNumber').value = '•••• •••• •••• ' + cardId.slice(-4);
+            }
+
+            modal.classList.add('active');
+        }
+
+        function closePaymentModal() {
+            const modal = document.getElementById('paymentModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('paymentModal');
+            if (modal) {
+                modal.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        closePaymentModal();
+                    }
+                });
+            }
+
+            // Handle payment form submission
+            const paymentForm = document.getElementById('paymentForm');
+            if (paymentForm) {
+                paymentForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Payment method saved successfully!');
+                    closePaymentModal();
+                });
+            }
+        });
+
+        function removeCard(cardId) {
+            // Placeholder for removing card
+            if (confirm('Are you sure you want to remove this payment method?')) {
+                alert('Remove card: ' + cardId);
+            }
+        }
+
+        function setPrimary(cardId) {
+            // Placeholder for setting primary card
+            alert('Set as primary: ' + cardId);
+        }
+
+        createParticles();
+    </script>
+</body>
+
+</html>

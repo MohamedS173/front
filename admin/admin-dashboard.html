@@ -60,10 +60,10 @@
                     <i class="fas fa-chart-bar"></i>
                     Analytics
                 </a>
-                <!-- <a href="#settings" class="nav-item" data-section="settings">
+                <a href="#settings" class="nav-item" data-section="settings">
                     <i class="fas fa-cog"></i>
                     Settings
-                </a> -->
+                </a>
             </nav>
         </aside>
 
@@ -585,6 +585,200 @@
         </section>
     </main>
 
+    <!-- Admin Modals -->
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="bookingModalTitle">Booking Details</h3>
+                <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+            </div>
+            <form class="admin-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="bookingId">Booking ID</label>
+                    <input type="text" id="bookingId" disabled>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerName">Customer Name</label>
+                        <input type="text" id="customerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerEmail">Email</label>
+                        <input type="email" id="customerEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="roomType">Room Type</label>
+                        <select id="roomType" required>
+                            <option value="">Select Room</option>
+                            <option value="deluxe">Deluxe Suite</option>
+                            <option value="standard">Standard Room</option>
+                            <option value="executive">Executive Suite</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingStatus">Status</label>
+                        <select id="bookingStatus" required>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="pending">Pending</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkIn">Check-in Date</label>
+                        <input type="date" id="checkIn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Check-out Date</label>
+                        <input type="date" id="checkOut" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="totalAmount">Total Amount</label>
+                    <input type="number" id="totalAmount" step="0.01" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Room Modal -->
+    <div class="modal-overlay" id="roomModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="roomModalTitle">Add New Room</h3>
+                <button class="modal-close" onclick="closeRoomModal()">&times;</button>
+            </div>
+            <form class="admin-form" id="roomForm">
+                <div class="form-group">
+                    <label for="roomName">Room Name</label>
+                    <input type="text" id="roomName" placeholder="e.g., Deluxe Suite 101" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="roomType2">Room Type</label>
+                        <select id="roomType2" required>
+                            <option value="">Select Type</option>
+                            <option value="single">Single</option>
+                            <option value="double">Double</option>
+                            <option value="suite">Suite</option>
+                            <option value="deluxe">Deluxe</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="capacity">Capacity (Guests)</label>
+                        <input type="number" id="capacity" min="1" max="10" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pricePerNight">Price per Night ($)</label>
+                        <input type="number" id="pricePerNight" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomStatus">Status</label>
+                        <select id="roomStatus" required>
+                            <option value="available">Available</option>
+                            <option value="occupied">Occupied</option>
+                            <option value="maintenance">Maintenance</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="roomDescription">Description</label>
+                    <textarea id="roomDescription" rows="4" placeholder="Room features and amenities..."></textarea>
+                </div>
+
+                <!-- Room Images Section -->
+                <div class="form-group">
+                    <label for="roomImage">Primary Room Image</label>
+                    <div class="image-upload-wrapper">
+                        <input type="file" id="roomImage" accept="image/*">
+                        <div class="image-preview" id="imagePreview">
+                            <i class="fas fa-image"></i>
+                            <p>Click to upload or drag and drop</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Images</label>
+                    <div class="gallery-upload-wrapper">
+                        <input type="file" id="roomGallery" accept="image/*" multiple>
+                        <div class="gallery-preview" id="galleryPreview">
+                            <i class="fas fa-images"></i>
+                            <p>Upload up to 5 additional images</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeRoomModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Room</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- User Modal -->
+    <div class="modal-overlay" id="userModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="userModalTitle">User Details</h3>
+                <button class="modal-close" onclick="closeUserModal()">&times;</button>
+            </div>
+            <form class="admin-form" id="userForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="userName">Full Name</label>
+                        <input type="text" id="userName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email</label>
+                        <input type="email" id="userEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="userRole">Role</label>
+                        <select id="userRole" required>
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="userStatus">Status</label>
+                        <select id="userStatus" required>
+                            <option value="active">Active</option>
+                            <option value="suspended">Suspended</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="userPhone">Phone Number</label>
+                    <input type="tel" id="userPhone" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="userJoinDate">Join Date</label>
+                    <input type="date" id="userJoinDate" disabled>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeUserModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="particles" id="particles"></div>
 
     <script>
@@ -617,19 +811,274 @@
         });
 
         // Placeholder functions for admin actions
-        function viewBooking(id) { alert('Viewing booking: ' + id); }
-        function editBooking(id) { alert('Editing booking: ' + id); }
-        function cancelBooking(id) { alert('Cancelling booking: ' + id); }
+        function viewBooking(id) { openBookingModal('view', id); }
+        function editBooking(id) { openBookingModal('edit', id); }
+        function cancelBooking(id) {
+            if (confirm('Are you sure you want to cancel this booking?')) {
+                alert('Booking cancelled: ' + id);
+            }
+        }
         function refundBooking(id) { alert('Processing refund for: ' + id); }
 
-        function addNewRoom() { alert('Adding new room'); }
-        function editRoom(id) { alert('Editing room: ' + id); }
-        function deleteRoom(id) { alert('Deleting room: ' + id); }
+        function addNewRoom() { openRoomModal('add'); }
+        function editRoom(id) { openRoomModal('edit', id); }
+        function deleteRoom(id) {
+            if (confirm('Are you sure you want to delete this room?')) {
+                alert('Room deleted: ' + id);
+            }
+        }
 
-        function viewUser(id) { alert('Viewing user: ' + id); }
-        function editUser(id) { alert('Editing user: ' + id); }
-        function suspendUser(id) { alert('Suspending user: ' + id); }
+        function viewUser(id) { openUserModal('view', id); }
+        function editUser(id) { openUserModal('edit', id); }
+        function suspendUser(id) {
+            if (confirm('Are you sure you want to suspend this user?')) {
+                alert('User suspended: ' + id);
+            }
+        }
         function activateUser(id) { alert('Activating user: ' + id); }
+
+        // Booking Modal Functions
+        function openBookingModal(mode, bookingId) {
+            const modal = document.getElementById('bookingModal');
+            const title = document.getElementById('bookingModalTitle');
+            const form = document.getElementById('bookingForm');
+
+            if (mode === 'view' || mode === 'edit') {
+                title.textContent = 'Edit Booking';
+                // Pre-fill form with booking data (placeholder)
+                document.getElementById('bookingId').value = bookingId;
+                document.getElementById('customerName').value = 'John Doe';
+                document.getElementById('customerEmail').value = 'john@example.com';
+                document.getElementById('roomType').value = 'deluxe';
+                document.getElementById('bookingStatus').value = 'confirmed';
+                document.getElementById('totalAmount').value = '300';
+            }
+            modal.classList.add('active');
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.remove('active');
+        }
+
+        // Room Modal Functions
+        function openRoomModal(mode, roomId) {
+            const modal = document.getElementById('roomModal');
+            const title = document.getElementById('roomModalTitle');
+            const form = document.getElementById('roomForm');
+
+            if (mode === 'add') {
+                title.textContent = 'Add New Room';
+                form.reset();
+            } else {
+                title.textContent = 'Edit Room';
+                // Pre-fill form with room data (placeholder)
+                document.getElementById('roomName').value = 'Deluxe Suite 101';
+                document.getElementById('roomType2').value = 'deluxe';
+                document.getElementById('capacity').value = '2';
+                document.getElementById('pricePerNight').value = '150';
+                document.getElementById('roomStatus').value = 'available';
+            }
+            modal.classList.add('active');
+        }
+
+        function closeRoomModal() {
+            const modal = document.getElementById('roomModal');
+            modal.classList.remove('active');
+            // Reset image uploads
+            document.getElementById('roomImage').value = '';
+            document.getElementById('roomGallery').value = '';
+            const imagePreview = document.getElementById('imagePreview');
+            const galleryPreview = document.getElementById('galleryPreview');
+            imagePreview.classList.remove('has-image');
+            imagePreview.innerHTML = '<i class="fas fa-image"></i><p>Click to upload or drag and drop</p>';
+            galleryPreview.classList.remove('has-images');
+            galleryPreview.innerHTML = '<i class="fas fa-images"></i><p>Upload up to 5 additional images</p>';
+        }
+
+        // Image Upload Handlers
+        document.addEventListener('DOMContentLoaded', function () {
+            const roomImageInput = document.getElementById('roomImage');
+            const roomGalleryInput = document.getElementById('roomGallery');
+            const imagePreview = document.getElementById('imagePreview');
+            const galleryPreview = document.getElementById('galleryPreview');
+
+            if (roomImageInput) {
+                roomImageInput.addEventListener('change', function (e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (event) {
+                            imagePreview.innerHTML = '<img src="' + event.target.result + '" alt="Room preview">';
+                            imagePreview.classList.add('has-image');
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                imagePreview.addEventListener('click', function () {
+                    roomImageInput.click();
+                });
+
+                // Drag and drop
+                imagePreview.addEventListener('dragover', function (e) {
+                    e.preventDefault();
+                    imagePreview.style.borderColor = 'var(--accent)';
+                });
+
+                imagePreview.addEventListener('dragleave', function () {
+                    imagePreview.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                });
+
+                imagePreview.addEventListener('drop', function (e) {
+                    e.preventDefault();
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0) {
+                        roomImageInput.files = files;
+                        const event = new Event('change', { bubbles: true });
+                        roomImageInput.dispatchEvent(event);
+                    }
+                });
+            }
+
+            if (roomGalleryInput) {
+                roomGalleryInput.addEventListener('change', function (e) {
+                    const files = e.target.files;
+                    if (files.length > 0) {
+                        let html = '<div class="uploaded-images-grid">';
+                        const maxFiles = Math.min(files.length, 5);
+
+                        for (let i = 0; i < maxFiles; i++) {
+                            const reader = new FileReader();
+                            reader.onload = function (event) {
+                                const item = document.createElement('div');
+                                item.className = 'uploaded-image-item';
+                                item.innerHTML = '<img src="' + event.target.result + '" alt="Room image"><button type="button" class="remove-btn" onclick="this.parentElement.remove()">×</button>';
+                                galleryPreview.querySelector('.uploaded-images-grid')?.appendChild(item) || galleryPreview.appendChild(item);
+                            };
+                            reader.readAsDataURL(files[i]);
+                        }
+
+                        galleryPreview.innerHTML = '<div class="uploaded-images-grid"></div>';
+                        galleryPreview.classList.add('has-images');
+
+                        // Process files
+                        for (let i = 0; i < maxFiles; i++) {
+                            const reader = new FileReader();
+                            reader.onload = function (event) {
+                                const item = document.createElement('div');
+                                item.className = 'uploaded-image-item';
+                                item.innerHTML = '<img src="' + event.target.result + '" alt="Room image"><button type="button" class="remove-btn" onclick="this.parentElement.remove()">×</button>';
+                                galleryPreview.querySelector('.uploaded-images-grid').appendChild(item);
+                            };
+                            reader.readAsDataURL(files[i]);
+                        }
+                    }
+                });
+
+                galleryPreview.addEventListener('click', function () {
+                    roomGalleryInput.click();
+                });
+
+                // Drag and drop for gallery
+                galleryPreview.addEventListener('dragover', function (e) {
+                    e.preventDefault();
+                    galleryPreview.style.borderColor = 'var(--accent)';
+                });
+
+                galleryPreview.addEventListener('dragleave', function () {
+                    galleryPreview.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                });
+
+                galleryPreview.addEventListener('drop', function (e) {
+                    e.preventDefault();
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0) {
+                        roomGalleryInput.files = files;
+                        const event = new Event('change', { bubbles: true });
+                        roomGalleryInput.dispatchEvent(event);
+                    }
+                });
+            }
+        });
+
+        // User Modal Functions
+        function openUserModal(mode, userId) {
+            const modal = document.getElementById('userModal');
+            const title = document.getElementById('userModalTitle');
+            const form = document.getElementById('userForm');
+
+            if (mode === 'view' || mode === 'edit') {
+                title.textContent = 'Edit User';
+                // Pre-fill form with user data (placeholder)
+                document.getElementById('userName').value = 'John Doe';
+                document.getElementById('userEmail').value = 'john@example.com';
+                document.getElementById('userRole').value = 'admin';
+                document.getElementById('userStatus').value = 'active';
+                document.getElementById('userPhone').value = '+1 (555) 123-4567';
+                document.getElementById('userJoinDate').value = '2024-01-15';
+            }
+            modal.classList.add('active');
+        }
+
+        function closeUserModal() {
+            const modal = document.getElementById('userModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function () {
+            // Booking Modal
+            const bookingModal = document.getElementById('bookingModal');
+            const roomModal = document.getElementById('roomModal');
+            const userModal = document.getElementById('userModal');
+            const bookingForm = document.getElementById('bookingForm');
+            const roomForm = document.getElementById('roomForm');
+            const userForm = document.getElementById('userForm');
+
+            if (bookingModal) {
+                bookingModal.addEventListener('click', function (e) {
+                    if (e.target === this) closeBookingModal();
+                });
+            }
+
+            if (roomModal) {
+                roomModal.addEventListener('click', function (e) {
+                    if (e.target === this) closeRoomModal();
+                });
+            }
+
+            if (userModal) {
+                userModal.addEventListener('click', function (e) {
+                    if (e.target === this) closeUserModal();
+                });
+            }
+
+            // Form submissions
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Booking saved successfully!');
+                    closeBookingModal();
+                });
+            }
+
+            if (roomForm) {
+                roomForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Room saved successfully!');
+                    closeRoomModal();
+                });
+            }
+
+            if (userForm) {
+                userForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('User saved successfully!');
+                    closeUserModal();
+                });
+            }
+        });
 
         createParticles();
     </script>

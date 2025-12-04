@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookify - Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="assets/logo.svg" alt="Bookify logo" width="40" height="40">
+                </div>
+                <h1 class="logo-text">Bookify</h1>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="rooms.html" class="nav-link">Rooms</a>
+                <a href="my-bookings.html" class="nav-link">My Bookings</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="login/login.html" class="nav-link">Logout</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="cart-section">
+            <div class="container">
+                <h1>Your Cart</h1>
+
+                <div class="cart-content">
+                    <div class="cart-items">
+                        <!-- Dynamic cart items will be inserted here -->
+                        <div class="cart-item">
+                            <div class="item-image">
+                                <img src="assets/property-1.jpg" alt="Deluxe Suite">
+                            </div>
+                            <div class="item-details">
+                                <h3>Deluxe Suite</h3>
+                                <div class="item-info">
+                                    <span><i class="fas fa-calendar"></i> Check-in: Dec 15, 2024</span>
+                                    <span><i class="fas fa-calendar"></i> Check-out: Dec 17, 2024</span>
+                                    <span><i class="fas fa-users"></i> 2 Guests</span>
+                                </div>
+                                <div class="item-price">
+                                    <span class="price">$150/night</span>
+                                    <span class="nights">× 2 nights</span>
+                                </div>
+                            </div>
+                            <div class="item-actions">
+                                <button class="remove-btn" onclick="removeItem(1)">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="cart-item">
+                            <div class="item-image">
+                                <img src="assets/property-2.jpg" alt="Standard Room">
+                            </div>
+                            <div class="item-details">
+                                <h3>Standard Room</h3>
+                                <div class="item-info">
+                                    <span><i class="fas fa-calendar"></i> Check-in: Dec 20, 2024</span>
+                                    <span><i class="fas fa-calendar"></i> Check-out: Dec 22, 2024</span>
+                                    <span><i class="fas fa-users"></i> 1 Guest</span>
+                                </div>
+                                <div class="item-price">
+                                    <span class="price">$100/night</span>
+                                    <span class="nights">× 2 nights</span>
+                                </div>
+                            </div>
+                            <div class="item-actions">
+                                <button class="remove-btn" onclick="removeItem(2)">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Empty cart state -->
+                        <!-- <div class="empty-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Your cart is empty</h3>
+                            <p>Add some rooms to get started!</p>
+                            <a href="rooms.html" class="btn btn-primary">Browse Rooms</a>
+                        </div> -->
+                    </div>
+
+                    <div class="cart-summary">
+                        <h3>Booking Summary</h3>
+                        <div class="summary-item">
+                            <span>Deluxe Suite (2 nights)</span>
+                            <span>$300</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Standard Room (2 nights)</span>
+                            <span>$200</span>
+                        </div>
+                        <div class="summary-item subtotal">
+                            <span>Subtotal</span>
+                            <span>$500</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Service Fee</span>
+                            <span>$25</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Taxes</span>
+                            <span>$50</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total</span>
+                            <span>$575</span>
+                        </div>
+
+
+
+                        <div class="checkout-actions">
+                            <a href="rooms.html" class="btn btn-secondary">Continue Shopping</a>
+                            <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bookify</h4>
+                    <p>Your trusted room booking platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bookify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="particles" id="particles"></div>
+
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            const navLinkElements = navLinks.querySelectorAll('.nav-link');
+            navLinkElements.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                });
+            });
+        }
+
+        function removeItem(itemId) {
+            // Placeholder for remove item functionality
+            if (confirm('Are you sure you want to remove this item from your cart?')) {
+                // Remove item logic here
+                console.log('Removing item:', itemId);
+            }
+        }
+
+        function applyPromo() {
+            const promoCode = document.getElementById('promoCode').value;
+            if (promoCode) {
+                // Placeholder for promo code application
+                alert('Promo code applied: ' + promoCode);
+            } else {
+                alert('Please enter a promo code');
+            }
+        }
+
+        createParticles();
+    </script>
+</body>
+
+</html>
